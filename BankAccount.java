@@ -1,18 +1,20 @@
 public class BankAccount{
     private double balance;
     private int accountID;
-    private String passward;
+
+    public String password;
+    // private String passward;
 
     /*Sole constructor requires all field's values*/
     public BankAccount(  int accountID, String password){
         this.balance = 0;
         this.accountID = accountID;
-        this.passward = password;
+        this.password = password;
     } 
 
     /*Return a String to be used to display the account data. "ACCOUNT\tBALANCE" */ 
     public String toString(){
-        return (Integer.toString(this.accountID)+ "\t" + String.valueOf(this.accountID));
+        return (Integer.toString(this.accountID)+ "\t" + String.valueOf(this.balance));
     } 
 
     /*standard accessor methods*/ 
@@ -26,7 +28,7 @@ public class BankAccount{
     /*Change the value of password to the specified value 
     *@param newPass The value to replace the old password with*/ 
     public void setPassword(String newPass){
-        this.passward = newPass;
+        this.password = newPass;
     } 
  
     /*Only when amount is positive: Increase balance by amount and return true. 
